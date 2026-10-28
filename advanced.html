@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Formulář rozšířeného vyhledávání Google.">
+  <title>Rozšířené vyhledávání</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="validation.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="small-wordmark" href="index.html">Google</a>
+    <nav class="top-nav" aria-label="Hlavní navigace">
+      <a href="index.html">Vyhledávání</a>
+      <a href="images.html">Obrázky</a>
+      <a href="formular.html">Formuláře</a>
+    </nav>
+  </header>
+
+  <main class="content-main">
+    <h1>Rozšířené vyhledávání</h1>
+    <p class="intro">Najděte stránky, které odpovídají všem zadaným kritériím.</p>
+    <form class="advanced-form" action="https://www.google.com/search" method="get">
+      <div class="form-row">
+        <label for="all-words">Všechna tato slova</label>
+        <input id="all-words" type="text" name="as_q">
+      </div>
+      <div class="form-row">
+        <label for="exact-phrase">Přesné sousloví</label>
+        <input id="exact-phrase" type="text" name="as_epq">
+      </div>
+      <div class="form-row">
+        <label for="any-words">Libovolné z těchto slov</label>
+        <input id="any-words" type="text" name="as_oq">
+      </div>
+      <div class="form-row">
+        <label for="none-words">Žádné z těchto slov</label>
+        <input id="none-words" type="text" name="as_eq">
+      </div>
+      <div class="form-row">
+        <label for="language">Jazyk</label>
+        <select id="language" name="lr">
+          <option value="">Libovolný jazyk</option>
+          <option value="lang_cs">Čeština</option>
+          <option value="lang_en">Angličtina</option>
+          <option value="lang_sk">Slovenština</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="region">Oblast</label>
+        <select id="region" name="cr">
+          <option value="">Libovolná oblast</option>
+          <option value="countryCZ">Česká republika</option>
+          <option value="countrySK">Slovensko</option>
+          <option value="countryUS">USA</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="filetype">Typ souboru</label>
+        <select id="filetype" name="as_filetype">
+          <option value="">Libovolný formát</option>
+          <option value="pdf">PDF</option>
+          <option value="doc">DOC</option>
+          <option value="ppt">PPT</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="site">Web nebo doména</label>
+        <input id="site" type="text" name="as_sitesearch" placeholder="např. example.com">
+      </div>
+      <div class="form-row">
+        <label for="date-range">Poslední aktualizace</label>
+        <select id="date-range" name="as_qdr">
+          <option value="">Kdykoli</option>
+          <option value="d">Posledních 24 hodin</option>
+          <option value="w">Poslední týden</option>
+          <option value="m">Poslední měsíc</option>
+          <option value="y">Poslední rok</option>
+        </select>
+      </div>
+      <div class="form-actions">
+        <button class="primary-button" type="submit">Rozšířené vyhledávání</button>
+      </div>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-links">
+      <a href="https://github.com/tomasmelcr" target="_blank" rel="noopener noreferrer">Moje portfolio</a>
+      <a href="citace.md">Citace a zdroje</a>
+    </p>
+    <p class="footer-links">
+      <a class="html-validator" href="https://validator.w3.org/">Validovat HTML</a>
+      <a class="css-validator" href="https://jigsaw.w3.org/css-validator/">Validovat CSS</a>
+    </p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ukázka různých HTML formulářových prvků a jejich typů.">
+  <title>Ukázka formulářů</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="validation.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="small-wordmark" href="index.html">Google</a>
+    <nav class="top-nav" aria-label="Hlavní navigace">
+      <a href="index.html">Vyhledávání</a>
+      <a href="images.html">Obrázky</a>
+      <a href="advanced.html">Rozšířené vyhledávání</a>
+    </nav>
+  </header>
+
+  <main class="content-main">
+    <h1>Ukázka formulářových prvků</h1>
+    <p class="intro">Přehled běžných typů polí HTML formuláře. Tento ukázkový formulář nic neodesílá.</p>
+
+    <form class="demo-form" action="#" method="get">
+      <fieldset>
+        <legend>Osobní údaje</legend>
+        <div class="demo-grid">
+          <div class="demo-field">
+            <label for="full-name">Jméno a příjmení</label>
+            <input id="full-name" name="name" type="text" placeholder="Jan Novák" autocomplete="name">
+          </div>
+          <div class="demo-field">
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" placeholder="jan@example.com" autocomplete="email">
+          </div>
+          <div class="demo-field">
+            <label for="password">Heslo</label>
+            <input id="password" name="password" type="password" autocomplete="new-password">
+          </div>
+          <div class="demo-field">
+            <label for="phone">Telefon</label>
+            <input id="phone" name="phone" type="tel" placeholder="+420 123 456 789" autocomplete="tel">
+          </div>
+          <div class="demo-field">
+            <label for="website">Webová stránka</label>
+            <input id="website" name="website" type="url" placeholder="https://example.com">
+          </div>
+          <div class="demo-field">
+            <label for="age">Věk</label>
+            <input id="age" name="age" type="number" min="0" max="120" step="1">
+          </div>
+          <div class="demo-field">
+            <label for="birthday">Datum narození</label>
+            <input id="birthday" name="birthday" type="date">
+          </div>
+          <div class="demo-field">
+            <label for="meeting-time">Čas schůzky</label>
+            <input id="meeting-time" name="meeting-time" type="time">
+          </div>
+          <div class="demo-field">
+            <label for="appointment">Datum a čas</label>
+            <input id="appointment" name="appointment" type="datetime-local">
+          </div>
+          <div class="demo-field">
+            <label for="birth-month">Měsíc narození</label>
+            <input id="birth-month" name="birth-month" type="month">
+          </div>
+          <div class="demo-field">
+            <label for="week">Oblíbený týden</label>
+            <input id="week" name="week" type="week">
+          </div>
+          <div class="demo-field">
+            <label for="favorite-color">Oblíbená barva</label>
+            <input id="favorite-color" name="color" type="color" value="#4285f4">
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Preference a výběr</legend>
+        <div class="demo-field">
+          <label for="country">Země</label>
+          <select id="country" name="country">
+            <option value="">Vyberte zemi</option>
+            <optgroup label="Evropa">
+              <option value="cz">Česká republika</option>
+              <option value="sk">Slovensko</option>
+            </optgroup>
+            <optgroup label="Ostatní">
+              <option value="us">USA</option>
+              <option value="other">Jiná</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="demo-field">
+          <label for="browser">Oblíbený prohlížeč (seznam)</label>
+          <input id="browser" name="browser" list="browsers" placeholder="Začněte psát…">
+          <datalist id="browsers">
+            <option value="Chrome"></option>
+            <option value="Firefox"></option>
+            <option value="Safari"></option>
+            <option value="Edge"></option>
+          </datalist>
+        </div>
+        <div class="demo-field">
+          <label for="satisfaction">Spokojenost: <output id="satisfaction-value" for="satisfaction">7</output>/10</label>
+          <input id="satisfaction" name="satisfaction" type="range" min="0" max="10" value="7">
+        </div>
+        <div class="choice-group">
+          <span class="group-label">Preferovaný kontakt</span>
+          <label><input type="radio" name="contact" value="email" checked> E-mail</label>
+          <label><input type="radio" name="contact" value="phone"> Telefon</label>
+          <label><input type="radio" name="contact" value="none"> Žádný</label>
+        </div>
+        <div class="choice-group">
+          <span class="group-label">Zájmy (lze vybrat více možností)</span>
+          <label><input type="checkbox" name="interests" value="technology"> Technologie</label>
+          <label><input type="checkbox" name="interests" value="travel"> Cestování</label>
+          <label><input type="checkbox" name="interests" value="art"> Umění</label>
+        </div>
+        <div class="demo-field">
+          <label for="message">Zpráva</label>
+          <textarea id="message" name="message" rows="5" placeholder="Napište zprávu…"></textarea>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Soubory a další ovládací prvky</legend>
+        <div class="demo-field">
+          <label for="avatar">Nahrát soubor</label>
+          <input id="avatar" name="avatar" type="file" accept="image/*">
+        </div>
+        <div class="demo-field">
+          <label for="search-demo">Ukázkové vyhledávání</label>
+          <input id="search-demo" name="search-demo" type="search" placeholder="Hledaný výraz">
+        </div>
+        <div class="choice-group">
+          <label><input name="terms" type="checkbox" required> Souhlasím s podmínkami (ukázka)</label>
+        </div>
+        <div class="button-row form-button-row">
+          <button class="primary-button" type="submit">Odeslat ukázku</button>
+          <button type="reset">Vymazat formulář</button>
+          <button type="button" onclick="window.alert('Toto je ukázkové tlačítko.')">Obyčejné tlačítko</button>
+        </div>
+      </fieldset>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-links">
+      <a href="https://github.com/tomasmelcr" target="_blank" rel="noopener noreferrer">Moje portfolio</a>
+      <a href="citace.md">Citace a zdroje</a>
+    </p>
+    <p class="footer-links">
+      <a class="html-validator" href="https://validator.w3.org/">Validovat HTML</a>
+      <a class="css-validator" href="https://jigsaw.w3.org/css-validator/">Validovat CSS</a>
+    </p>
+  </footer>
+</body>
+</html>

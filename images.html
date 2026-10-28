@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Vyhledávání obrázků pomocí Google.">
+  <title>Google Obrázky</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="validation.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="top-nav" aria-label="Hlavní navigace">
+      <a href="index.html">Vyhledávání</a>
+      <a href="advanced.html">Rozšířené vyhledávání</a>
+      <a href="formular.html">Formuláře</a>
+    </nav>
+  </header>
+
+  <main class="home-main">
+    <h1 class="wordmark" aria-label="Google">G<span>o</span><span class="wordmark-yellow">o</span>g<span class="wordmark-green">l</span><span>e</span><span class="images-label"> Obrázky</span></h1>
+    <form class="search-form" action="https://www.google.com/search" method="get">
+      <label class="visually-hidden" for="image-query">Hledat obrázky Google</label>
+      <input type="hidden" name="tbm" value="isch">
+      <input class="search-input" id="image-query" type="search" name="q" autocomplete="off">
+      <div class="button-row">
+        <button type="submit">Hledat obrázky</button>
+      </div>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-links">
+      <a href="https://github.com/tomasmelcr" target="_blank" rel="noopener noreferrer">Moje portfolio</a>
+      <a href="citace.md">Citace a zdroje</a>
+    </p>
+    <p class="footer-links">
+      <a class="html-validator" href="https://validator.w3.org/">Validovat HTML</a>
+      <a class="css-validator" href="https://jigsaw.w3.org/css-validator/">Validovat CSS</a>
+    </p>
+  </footer>
+</body>
+</html>
